@@ -6,7 +6,7 @@ require "human_attribute_values/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "human_attribute_values"
-  s.version     = HumanAttributeValue::VERSION
+  s.version     = HumanAttributeValues::VERSION
   s.authors     = ["Jonas Peschla"]
   s.email       = ["github@peschla.net"]
   s.homepage    = "TODO"

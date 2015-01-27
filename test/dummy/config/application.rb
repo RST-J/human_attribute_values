@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require "human_attribute_value"
+require "human_attribute_values"
 
 module Dummy
   class Application < Rails::Application
