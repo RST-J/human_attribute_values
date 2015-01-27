@@ -1,4 +1,4 @@
-module HumanAttributeValue
+module HumanAttributeValues
   extend ActiveSupport::Concern
 
   included {}
@@ -35,4 +35,4 @@ module HumanAttributeValue
 end
 
 
-ActiveRecord::Base.send :include, HumanAttributeValue
+ActiveRecord::Base.send :include, HumanAttributeValues

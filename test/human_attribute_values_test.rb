@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class HumanAttributeValueTest < ActiveSupport::TestCase
+class HumanAttributeValuesTest < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, HumanAttributeValue
+    assert_kind_of Module, HumanAttributeValues
   end
 
   def create_answer(value)

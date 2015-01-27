@@ -1,11 +1,11 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "human_attribute_value/version"
+require "human_attribute_values/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "human_attribute_value"
+  s.name        = "human_attribute_values"
   s.version     = HumanAttributeValue::VERSION
   s.authors     = ["Jonas Peschla"]
   s.email       = ["github@peschla.net"]
