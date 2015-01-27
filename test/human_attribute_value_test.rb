@@ -12,7 +12,6 @@ class HumanAttributeValueTest < ActiveSupport::TestCase
   test "localization for '42'" do
     answer = create_answer('42')
     assert_equal(answer.human_attribute_value(:ultimate_truth), 'was found by Douglas Adams')
-    debugger
     assert_equal(answer.human_attribute_value(:ultimate_truth, count: 2), 'there is only one ultimate answer')
   end
 end

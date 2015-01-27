@@ -11,7 +11,6 @@ module HumanAttributeValue
   module ClassMethods
     def human_attribute_value(attribute, value, options = {})
       options = { count: 1 }.merge!(options)
-      debugger
       parts = attribute.to_s.split(".")
       attribute = parts.pop
       namespace = parts.join("/") unless parts.empty?
