@@ -1,0 +1,14 @@
+en:
+ activerecord:
+    models:
+      the_answer: The ultimate Answer
+    attributes:
+      the_answer:
+        ultimate_truth: "The answer the answer to life, the universe and everything"
+    values:
+      the_answer:
+        ultimate_truth:
+          '42':
+            one: was found by Douglas Adams
+            other: there is only one ultimate answer
+          'to be or not to be': was coined by Shakespeare
