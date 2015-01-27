@@ -5,7 +5,7 @@ module HumanAttributeValues
 
   def human_attribute_value(attribute, options = {})
     value = self.send attribute
-    value.present? ? self.class.human_attribute_value(attribute, value, options) : default
+    value.present? ? self.class.human_attribute_value(attribute, value, options) : ''
   end
 
   module ClassMethods

@@ -14,4 +14,9 @@ class HumanAttributeValuesTest < ActiveSupport::TestCase
     assert_equal(answer.human_attribute_value(:ultimate_truth), 'was found by Douglas Adams')
     assert_equal(answer.human_attribute_value(:ultimate_truth, count: 2), 'there is only one ultimate answer')
   end
+
+  test "localization for nil values" do
+    answer = create_answer(nil)
+    assert_equal(answer.human_attribute_value(:ultimate_truth), '')
+  end
 end
