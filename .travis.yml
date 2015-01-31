@@ -12,3 +12,5 @@ rvm:
 script:
   - cd test/dummy
   - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
+  - cd ../..
+  - rake test
