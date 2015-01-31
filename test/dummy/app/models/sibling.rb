@@ -1,0 +1,2 @@
+class Sibling < Parent
+end

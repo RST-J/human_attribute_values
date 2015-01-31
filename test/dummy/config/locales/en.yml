@@ -9,6 +9,32 @@ en:
       the_answer:
         ultimate_truth:
           '42':
-            one: was found by Douglas Adams
+            one: was calculated by Deep Thought
             other: there is only one ultimate answer
-          'to be or not to be': was coined by Shakespeare
+          'wissen ist Nacht': coined by Prof. Dr. Abdul Nachtigaller
+      parent:
+        field:
+          '1': 'parent value 1'
+          '2': 'parent value 2'
+          '3': 'parent value 3'
+      child:
+        field:
+          '1': 'child value 1'
+          '2': 'child value 2'
+      sibling:
+        field:
+          '4': 'sibling value 4'
+      grand_child:
+        field:
+          '1': 'grandchild value 1'
+      boolean_model:
+        boolean_field:
+          'true': 'This is true'
+      numeric_model:
+        integer_field:
+          '1': 'One'
+        decimal_field:
+          '1_0': 'One point zero'
+      enum_model:
+        status:
+          dead_and_alive: 'The box has not been opened yet'

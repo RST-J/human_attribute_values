@@ -11,7 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127220502) do
+ActiveRecord::Schema.define(version: 20150131170613) do
+
+  create_table "boolean_models", force: true do |t|
+    t.boolean  "boolean_field"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "enum_models", force: true do |t|
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lexicons", force: true do |t|
+    t.integer  "the_answer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lexicons", ["the_answer_id"], name: "index_lexicons_on_the_answer_id"
+
+  create_table "numeric_models", force: true do |t|
+    t.integer  "integer_field"
+    t.decimal  "decimal_field"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parents", force: true do |t|
+    t.string   "type"
+    t.string   "field"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "the_answers", force: true do |t|
     t.string   "ultimate_truth"
