@@ -1,5 +1,6 @@
 # human_attribute_values
 [![Build Status](https://travis-ci.org/RST-J/human_attribute_values.svg?branch=master)](https://travis-ci.org/RST-J/human_attribute_values)
+[![Gem Version](https://badge.fury.io/rb/human_attribute_values.svg)](http://badge.fury.io/rb/human_attribute_values)
 
 human_attribute_values is a Rails plugin which provides translation for model attribute values using the Rails I18n API (analogously to [human_attribute_name](http://apidock.com/rails/v4.1.8/ActiveModel/Translation/human_attribute_name)).
 
