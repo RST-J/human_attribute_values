@@ -24,7 +24,7 @@ en:
       schroedinger:
         cat_status:
           dead_and_alive: The box is still closed.
-          alive: You opened the box and kitty purs.
+          alive: You opened the box and kitty purrs.
 ```
 
 Translations:
@@ -33,16 +33,16 @@ class Schroedinger < ActiveRecord::Base
   enum cat_status: {dead_and_alive: 0, alive: 1, dead: 2}
 end
 
-# Translate by calling human_attribute_value with the attribute to be translated on instances
+# Translation on instances by passing the attribute to be translated
 Schroedinger.new(cat_status: :dead_and_alive).human_attribute_value(:cat_status)
  => "The box is still closed."
 
-# Translate a value by passing attribute and value to human_attribute_value on the model class
-Schroedinger.new.human_attribute_value(:cat_status, :alive)
+# Translation on the model class by passing attribute and value
+Schroedinger.human_attribute_value(:cat_status, :alive)
  => "You opened the box and kitty purs."
 
 # If there is no translation specified in the locale, the stringified value is returned
-Schroedinger.new.human_attribute_value(:cat_status, :dead)
+Schroedinger.human_attribute_value(:cat_status, :dead)
  => "dead"
 
 ```
