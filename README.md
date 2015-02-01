@@ -4,6 +4,9 @@
 human_attribute_values is a Rails plugin which provides translation for model attribute values using the Rails I18n API (analogously to [human_attribute_name](http://apidock.com/rails/v4.1.8/ActiveModel/Translation/human_attribute_name)).
 
 ## Installation
+```
+gem install human_attribute_values
+```
 
 ## Supported versions
   * Rails: 4.18
