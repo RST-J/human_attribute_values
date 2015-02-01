@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.version     = HumanAttributeValues::VERSION
   s.authors     = ["Jonas Peschla"]
   s.email       = ["github@peschla.net"]
-  s.homepage    = "TODO"
-  s.summary     = "Translate attribute values for enums analogoues to human_attribute_name"
-  s.description = "TODO: Description of HumanAttributeValue."
+  s.homepage    = "https://github.com/RST-J/human_attribute_values"
+  s.summary     = "Translate attribute values using Rails I18n API."
+  s.description = "Translate attribute values using Rails I18n API."
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.1.8"
