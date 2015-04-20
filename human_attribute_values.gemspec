@@ -18,8 +18,9 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 2.0.0"
   s.license = "MIT"
 
-  s.add_dependency "rails", "~> 4.1.8"
+  s.add_dependency "rails", ">= 4.1.8"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "appraisal"
   #s.add_development_dependency "byebug"
 end

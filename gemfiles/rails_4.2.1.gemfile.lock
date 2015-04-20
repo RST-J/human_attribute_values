@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ../
   specs:
     human_attribute_values (0.0.2)
       rails (>= 4.1.8)
@@ -109,4 +109,5 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   human_attribute_values!
+  rails (= 4.2.1)
   sqlite3
