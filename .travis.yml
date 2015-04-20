@@ -7,7 +7,9 @@ rvm:
   - rbx
 
 script:
+  - bundle install
   - cd test/dummy
   - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
   - cd ../..
+  - appraisal install
   - appraisal rake test
