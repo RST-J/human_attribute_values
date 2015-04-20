@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["github@peschla.net"]
   s.homepage    = "https://github.com/RST-J/human_attribute_values"
   s.summary     = "Translate attribute values using Rails I18n API."
-  s.description = "Translate attribute values using Rails I18n API."
+  s.description = "Easy translation of attribute values for models through locale files in a similar way as for attribute names."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 4.1.8", "<4.3"
 
-  s.add_development_dependency "sqlite3"
-  s.add_development_dependency "appraisal"
+  s.add_development_dependency "sqlite3", "~> 0"
+  s.add_development_dependency "appraisal", "~> 0"
   #s.add_development_dependency "byebug"
 end
