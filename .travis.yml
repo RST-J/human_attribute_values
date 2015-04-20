@@ -6,10 +6,13 @@ rvm:
   - "2.2"
   - rbx
 
+gemfile:
+  - gemfiles/rails_4.1.8.gemfile
+  - gemfiles/rails_4.1.10.gemfile
+  - gemfiles/rails_4.2.1.gemfile
+
 script:
-  - bundle install
   - cd test/dummy
   - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
   - cd ../..
-  - appraisal install
-  - appraisal rake test
+  - rake test
