@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    human_attribute_values (0.0.2)
+    human_attribute_values (1.0.0)
       rails (>= 4.1.8, < 5.1)
 
 GEM
