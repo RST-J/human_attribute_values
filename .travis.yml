@@ -10,6 +10,7 @@ gemfile:
   - gemfiles/rails_4.1.8.gemfile
   - gemfiles/rails_4.1.10.gemfile
   - gemfiles/rails_4.2.1.gemfile
+  - gemfiles/rails_5.0.0.1.gemfile
 
 script:
   - cd test/dummy
