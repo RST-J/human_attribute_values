@@ -1,11 +1,18 @@
 language: ruby
 
+rbx-1[.4.3]
+rbx-2.3[.0]
+rbx-2.4[.1]
+rbx[-2.5.8]
 rvm:
   - "2.0"
   - "2.1"
   - "2.2"
   - "2.3.1"
-  - rbx-2
+  - "rbx-1"
+  - "rbx-2.3"
+  - "rbx-2.4"
+  - "rbx"
 
 gemfile:
   - gemfiles/rails_4.1.8.gemfile
