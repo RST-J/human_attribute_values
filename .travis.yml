@@ -1,9 +1,5 @@
 language: ruby
 
-rbx-1[.4.3]
-rbx-2.3[.0]
-rbx-2.4[.1]
-rbx[-2.5.8]
 rvm:
   - "2.0"
   - "2.1"
@@ -22,11 +18,11 @@ gemfile:
 
 matrix:
   exclude:
-    - rvm: 2.0
+    - rvm: "2.0"
       gemfile: gemfiles/rails_5.0.0.1.gemfile
-    - rvm: 2.1
+    - rvm: "2.1"
       gemfile: gemfiles/rails_5.0.0.1.gemfile
-    - rvm: 2.2
+    - rvm: "2.2"
       gemfile: gemfiles/rails_5.0.0.1.gemfile
 
 script:
