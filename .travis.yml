@@ -13,6 +13,15 @@ gemfile:
   - gemfiles/rails_4.2.1.gemfile
   - gemfiles/rails_5.0.0.1.gemfile
 
+matrix:
+  exclude:
+    - rvm: 2.0
+      gemfile: gemfiles/rails_5.0.0.1.gemfile
+    - rvm: 2.1
+      gemfile: gemfiles/rails_5.0.0.1.gemfile
+    - rvm: 2.2
+      gemfile: gemfiles/rails_5.0.0.1.gemfile
+
 script:
   - cd test/dummy
   - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
