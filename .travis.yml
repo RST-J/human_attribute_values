@@ -5,6 +5,7 @@ rvm:
   - "2.1"
   - "2.2"
   - "2.3.1"
+  - "jruby"
   - "rbx-1"
   - "rbx-2.3"
   - "rbx-2.4"
@@ -17,6 +18,11 @@ gemfile:
   - gemfiles/rails_5.0.0.1.gemfile
 
 matrix:
+  allow_failures:
+    - rvm: "rbx-1"
+    - rvm: "rbx-2.3"
+    - rvm: "rbx-2.4"
+    - rvm: "rbx"
   exclude:
     - rvm: "2.0"
       gemfile: gemfiles/rails_5.0.0.1.gemfile
