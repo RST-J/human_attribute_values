@@ -1,1 +1,2 @@
 gemfiles/*.gemfile.lock
+/pkg/
