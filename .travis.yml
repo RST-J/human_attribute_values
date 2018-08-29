@@ -31,6 +31,8 @@ matrix:
       gemfile: gemfiles/rails_4.1.16.gemfile
     - rvm: "2.5.1"
       gemfile: gemfiles/rails_4.1.16.gemfile
+    - rvm: "ruby-head"
+      gemfile: gemfiles/rails_4.1.16.gemfile
 
 script:
   - cd test/dummy
