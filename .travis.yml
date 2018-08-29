@@ -7,11 +7,7 @@ rvm:
   - "2.3.7"
   - "2.4.4"
   - "2.5.1"
-  - "jruby"
-  - "rbx-1"
-  - "rbx-2.3"
-  - "rbx-2.4"
-  - "rbx"
+  - "ruby-head"
 
 gemfile:
   - gemfiles/rails_4.1.16.gemfile
@@ -21,10 +17,7 @@ gemfile:
 
 matrix:
   allow_failures:
-    - rvm: "rbx-1"
-    - rvm: "rbx-2.3"
-    - rvm: "rbx-2.4"
-    - rvm: "rbx"
+    - rvm: "ruby-head"
   exclude:
     - rvm: "2.0"
       gemfile: gemfiles/rails_5.1.6.gemfile
@@ -34,6 +27,10 @@ matrix:
       gemfile: gemfiles/rails_5.1.6.gemfile
     - rvm: "2.1.10"
       gemfile: gemfiles/rails_5.2.1.gemfile
+    - rvm: "2.4.4"
+      gemfile: gemfiles/rails_4.1.16.gemfile
+    - rvm: "2.5.1"
+      gemfile: gemfiles/rails_4.1.16.gemfile
 
 script:
   - cd test/dummy
