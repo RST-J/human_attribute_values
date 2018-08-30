@@ -10,7 +10,7 @@ gem install human_attribute_values
 ```
 
 ## Supported versions
-  * Rails: >= 4.1.8
+  * Rails: >= 4.2.10
   * Ruby: MRI >= 2.0
 
 ## Usage
