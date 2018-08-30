@@ -8,8 +8,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Added
-- added a changelog
-- also include HumanAttributeValues into ActiveModel::Model
+- Added a changelog.
+- Also include HumanAttributeValues into ActiveModel::Model.
 
 ### Changed
-- instead of aborting and returning '' for associations of ActiveRecord::Base the lookup now proceeds with `assoc_attribute.to_s` as key (not meant to be done anyways)
+- Instead of aborting and returning '' for associations of ActiveRecord::Base the lookup now proceeds with `assoc_attribute.to_s` as key (not meant to be done anyways).
+
+### Removed
+- Drop support for rails 4.1.8, including HumanAttributeValues into ActiveModel::Model does not add class method.

@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     human_attribute_values (1.0.1)
-      rails (>= 4.1.8, < 6.0)
+      rails (>= 4.2.10, < 6.0)
 
 GEM
   remote: https://rubygems.org/
