@@ -5,6 +5,7 @@ class CreateTheAnswers < superclass
   def change
     create_table :the_answers do |t|
       t.string :ultimate_truth
+      t.references :lexicon, index: true
 
       t.timestamps
     end

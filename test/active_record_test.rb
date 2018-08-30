@@ -1,10 +1,6 @@
 require 'test_helper'
 
-class HumanAttributeValuesTest < ActiveSupport::TestCase
-  test "truth" do
-    assert_kind_of Module, HumanAttributeValues
-  end
-
+class ActiveRecordTest < ActiveSupport::TestCase
   test "attribute with count config" do
     answer = TheAnswer.new(ultimate_truth: '42')
     assert_equal('was calculated by Deep Thought', answer.human_attribute_value(:ultimate_truth), 'should use the mapping for count option 1 by default')
@@ -53,8 +49,10 @@ class HumanAttributeValuesTest < ActiveSupport::TestCase
   end
 
   test "resolution for associations" do
-    lexicon = Lexicon.new(the_answer: TheAnswer.new)
-    assert_equal('', lexicon.human_attribute_value(:the_answer), 'should return empty string for associations')
+    lexicon = Lexicon.new
+    the_answer = TheAnswer.new(lexicon: lexicon)
+    assert_equal(lexicon.to_s, the_answer.human_attribute_value(:lexicon), 'should return .to_s for associations 1')
+    assert_equal(lexicon.the_answers.to_s, lexicon.human_attribute_value(:the_answers), 'should return .to_s for associations 2')
   end
 
   test "resolution for enums" do

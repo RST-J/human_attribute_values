@@ -1,0 +1,2 @@
+class ActiveModelGrandChild < ActiveModelChild
+end
