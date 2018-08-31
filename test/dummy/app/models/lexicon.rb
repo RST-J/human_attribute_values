@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Lexicon < ActiveRecord::Base
-  belongs_to :the_answer
+  has_many :the_answers
 end

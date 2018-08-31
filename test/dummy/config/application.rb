@@ -1,9 +1,11 @@
-require File.expand_path('../boot', __FILE__)
+# frozen_string_literal: true
+
+require File.expand_path('boot', __dir__)
 
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require "human_attribute_values"
+require 'human_attribute_values'
 
 module Dummy
   class Application < Rails::Application
@@ -21,4 +23,3 @@ module Dummy
     config.active_record.sqlite3.represent_boolean_as_integer = true if config.active_record.sqlite3.respond_to?(:represent_boolean_as_integer)
   end
 end
-
