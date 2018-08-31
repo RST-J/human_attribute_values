@@ -1,5 +1,36 @@
 en:
- activerecord:
+  activemodel:
+    values:
+      active_model_model:
+        boolean_attr:
+          'false': 'This is false'
+        decimal_attr:
+          '2_71': e
+        float_attr:
+          '3_14': Pi
+        integer_attr:
+          '2': odd prime
+          '9001': 'over 9000'
+        string_attr:
+          'goose':
+            one: one goose
+            other: some geese
+      active_model_parent:
+        inherited_attr:
+          one: 'active model parent value 1'
+          two: 'active model parent value 2'
+          three: 'active model parent value 3'
+      active_model_child:
+        inherited_attr:
+          one: 'active model child value 1'
+          two: 'active model child value 2'
+      active_model_sibling:
+        inherited_attr:
+          four: 'active model sibling value 4'
+      active_model_grand_child:
+        inherited_attr:
+          one: 'active model grandchild value 1'
+  activerecord:
     models:
       the_answer: The ultimate Answer
     attributes:

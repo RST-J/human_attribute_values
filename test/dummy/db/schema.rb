@@ -14,41 +14,41 @@ ActiveRecord::Schema.define(version: 2015_01_31_170613) do
 
   create_table "boolean_models", force: :cascade do |t|
     t.boolean "boolean_field"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "enum_models", force: :cascade do |t|
     t.integer "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "lexicons", force: :cascade do |t|
-    t.integer "the_answer_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["the_answer_id"], name: "index_lexicons_on_the_answer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "numeric_models", force: :cascade do |t|
     t.integer "integer_field"
     t.decimal "decimal_field"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "parents", force: :cascade do |t|
     t.string "type"
     t.string "field"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "the_answers", force: :cascade do |t|
     t.string "ultimate_truth"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "lexicon_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lexicon_id"], name: "index_the_answers_on_lexicon_id"
   end
 
 end

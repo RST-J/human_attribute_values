@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/RST-J/human_attribute_values.svg?branch=master)](https://travis-ci.org/RST-J/human_attribute_values)
 [![Gem Version](https://badge.fury.io/rb/human_attribute_values.svg)](http://badge.fury.io/rb/human_attribute_values)
 
-human_attribute_values is a Rails plugin which provides translation for model attribute values using the Rails I18n API (analogously to [human_attribute_name](http://apidock.com/rails/v4.1.8/ActiveModel/Translation/human_attribute_name)).
+human_attribute_values is a Rails plugin which provides translation for model attribute values using the Rails I18n API (analogously to [human_attribute_name](https://apidock.com/rails/v4.2.7/ActiveModel/Translation/human_attribute_name)).
 
 ## Installation
 ```
@@ -10,12 +10,12 @@ gem install human_attribute_values
 ```
 
 ## Supported versions
-  * Rails: >= 4.1.8
+  * Rails: >= 4.2.10
   * Ruby: MRI >= 2.0
 
 ## Usage
-The gem defines ``human_attribute_value`` on each model, both as instance and as class method.
-To translate a value it uses the I18n API. The translations are looked up from the current locale file under the key ``'activerecord.values.model_name.attribute_name.value'`` by default.
+The gem defines ``human_attribute_value`` as instance and class method on ``ActiveRecord::Base`` and ``ActiveModel::Model``.
+To translate a value it uses the I18n API. The translations are looked up from the current locale file under the key ``'activerecord.values.model_name.attribute_name.value'`` respectively ``'activemodel.values.model_name.attribute_name.value'`` by default.
 
 Locale:
 ```yml
