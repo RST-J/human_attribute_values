@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.description = 'Easy translation of attribute values for models through locale files in a similar way as for attribute names.'
 
   s.files = Dir['lib/**/*.rb']
-  s.extra_rdoc_files = ['README.md', 'MIT-LICENSE.md', 'CHANGELOG.md']
+  s.extra_rdoc_files = ['README.md', 'MIT-LICENSE', 'CHANGELOG.md']
   s.test_files = Dir['test/**/*']
   s.required_ruby_version = '>= 2.0.0'
   s.license = 'MIT'
