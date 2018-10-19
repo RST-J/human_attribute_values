@@ -12,14 +12,11 @@ matrix:
   allow_failures:
     - rvm: "ruby-head"
 
-before_install:
-  - gem install bundler
-
 before_script:
-  - appraisal install
+  - bundle exec appraisal install
   - cd test/dummy
   - RAILS_ENV=test bundle exec rake db:create db:schema:load db:environment:set --trace
   - cd ../..
 
 script:
-  - appraisal rake test
+  - bundle exec appraisal rake test
