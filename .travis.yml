@@ -18,8 +18,12 @@ matrix:
   allow_failures:
     - rvm: "ruby-head"
 
-script:
+before_script:
+  - gem install bundler
+  - bundle install
   - cd test/dummy
   - RAILS_ENV=test bundle exec rake db:create db:schema:load --trace
   - cd ../..
+
+script:
   - rake test
