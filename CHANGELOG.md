@@ -5,7 +5,7 @@ Please keep to the changelog format described on [keepachangelog.com](http://kee
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## 1.1.1 - 2018-09-01
 
 ### Added
 - Added a changelog.
