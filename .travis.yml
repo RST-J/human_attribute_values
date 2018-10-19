@@ -1,34 +1,22 @@
 language: ruby
+cache: bundler
+sudo: false
 
 rvm:
-  - "2.0"
-  - "2.1.10"
-  - "2.2.10"
-  - "2.3.7"
-  - "2.4.4"
-  - "2.5.1"
+  - "2.3.8"
+  - "2.4.5"
+  - "2.5.3"
   - "ruby-head"
-
-gemfile:
-  - gemfiles/rails_4.2.10.gemfile
-  - gemfiles/rails_5.1.6.gemfile
-  - gemfiles/rails_5.2.1.gemfile
 
 matrix:
   allow_failures:
     - rvm: "ruby-head"
-  exclude:
-    - rvm: "2.0"
-      gemfile: gemfiles/rails_5.1.6.gemfile
-    - rvm: "2.0"
-      gemfile: gemfiles/rails_5.2.1.gemfile
-    - rvm: "2.1.10"
-      gemfile: gemfiles/rails_5.1.6.gemfile
-    - rvm: "2.1.10"
-      gemfile: gemfiles/rails_5.2.1.gemfile
+
+before_script:
+  - bundle exec appraisal install
+  - cd test/dummy
+  - RAILS_ENV=test bundle exec rake db:create db:schema:load db:environment:set --trace
+  - cd ../..
 
 script:
-  - cd test/dummy
-  - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
-  - cd ../..
-  - rake test
+  - bundle exec appraisal rake test
