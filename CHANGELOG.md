@@ -6,17 +6,16 @@ Please keep to the changelog format described on [keepachangelog.com](http://kee
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Replace dots for all types of values (not only Numeric)
 ### Removed
 - Drop support for EOL rubies (2.2.10 and below)
-
 
 ## [1.1.1] - 2018-09-01
 ### Added
 - Added a changelog.
 - Also include HumanAttributeValues into ActiveModel::Model.
-
 ### Changed
 - Instead of aborting and returning '' for associations of ActiveRecord::Base the lookup now proceeds with `assoc_attribute.to_s` as key (not meant to be done anyways).
-
 ### Removed
 - Drop support for rails 4.1.8, including HumanAttributeValues into ActiveModel::Model does not add class method.
