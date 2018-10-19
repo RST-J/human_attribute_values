@@ -15,6 +15,7 @@ en:
           'goose':
             one: one goose
             other: some geese
+          'application/x-my_mime1': Custom Mime Type 1
       active_model_parent:
         inherited_attr:
           one: 'active model parent value 1'
@@ -43,6 +44,7 @@ en:
             one: was calculated by Deep Thought
             other: there is only one ultimate answer
           'wissen ist Nacht': coined by Prof. Dr. Abdul Nachtigaller
+          'application/x-my_mime2': Custom Mime Type 2
       parent:
         field:
           '1': 'parent value 1'

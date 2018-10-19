@@ -17,6 +17,14 @@ class ActiveRecordTest < ActiveSupport::TestCase
     assert_equal('coined by Prof. Dr. Abdul Nachtigaller', answer.human_attribute_value(:ultimate_truth, count: 2), 'should successfully translate with count option 2')
   end
 
+  test 'mime type definition with a dot' do
+    answer = TheAnswer.new(ultimate_truth: 'application/x-my.mime2')
+    assert_equal('Custom Mime Type 2', answer.human_attribute_value(:ultimate_truth), 'should successfully translate the mime type with dot')
+
+    answer.ultimate_truth = 'application/x-my.untranslated_mime'
+    assert_equal('application/x-my.untranslated_mime', answer.human_attribute_value(:ultimate_truth), 'should return the unmodified value for an untranslated mime type with dot')
+  end
+
   test 'hierarchy resolution for STI models' do
     grandchild = GrandChild.new(field: '1')
     assert_equal('grandchild value 1', grandchild.human_attribute_value(:field), 'should use value for the actual class if present')
