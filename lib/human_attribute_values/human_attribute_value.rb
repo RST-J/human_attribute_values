@@ -18,7 +18,7 @@ module HumanAttributeValues
       value_scope = "#{i18n_scope}.values"
 
       # dots would mean a new nesting level in YAML files
-      key = value.is_a?(Numeric) ? value.to_s.tr('.', '_') : value
+      key = value.to_s.tr('.', '_')
 
       if namespace
         defaults = lookup_ancestors.map do |klass|

@@ -13,9 +13,11 @@ matrix:
     - rvm: "ruby-head"
 
 before_script:
+  - gem install bundler
   - bundle exec appraisal install
   - cd test/dummy
-  - RAILS_ENV=test bundle exec rake db:create db:schema:load db:environment:set --trace
+  - bundle exec rake db:create db:schema:load RAILS_ENV=test --trace
+  - bundle exec rake db:environment:set RAILS_ENV=test --trace
   - cd ../..
 
 script:
