@@ -12,6 +12,9 @@ matrix:
   allow_failures:
     - rvm: "ruby-head"
 
+before_install:
+  - gem install bundler
+
 before_script:
   - appraisal install
   - cd test/dummy
