@@ -5,7 +5,7 @@ Please keep to the changelog format described on [keepachangelog.com](http://kee
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [1.2.0] - 2018-10-21
 ### Fixed
 - Replace dots for all types of values (not only Numeric)
 ### Removed
