@@ -96,8 +96,8 @@ en:
           '42': 'the answer to life, the universe and everything'
 ```
 
-### Strings
-Starting with version 1.2.0, dots in strings are also replaced by an underscore for the lookup (before this was only done for numbers).
+### Strings and Symbols
+Starting with version 1.2.0, dots in strings and symbols (actually in all values) are also replaced by an underscore for the lookup (before this was only done for numbers).
 
 
 ### Child classes
