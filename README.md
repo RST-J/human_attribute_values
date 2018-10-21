@@ -17,9 +17,15 @@ gem install human_attribute_values
 The gem defines ``human_attribute_value`` as instance and class method on ``ActiveRecord::Base`` and ``ActiveModel::Model``.
 To translate a value it uses the I18n API. The translations are looked up from the current locale file under the key ``'activerecord.values.model_name.attribute_name.value'`` respectively ``'activemodel.values.model_name.attribute_name.value'`` by default.
 
-Locale:
+### Locale:
 ```yml
 en:
+  activemodel:
+    values:
+      file_model:
+        content_type:
+          application/pdf: PDF
+          application/vnd_openxmlformats-officedocument_spreadsheetml_sheet: Excel/Calc
   activerecord:
     values:
       schroedinger:
@@ -28,8 +34,10 @@ en:
           alive: You opened the box and kitty purrs.
 ```
 
-Translations:
+### Translations:
 ```ruby
+# For ActiveRecord
+
 class Schroedinger < ActiveRecord::Base
   enum cat_status: {dead_and_alive: 0, alive: 1, dead: 2}
 end
@@ -46,6 +54,22 @@ Schroedinger.human_attribute_value(:cat_status, :alive)
 Schroedinger.human_attribute_value(:cat_status, :dead)
  => "dead"
 
+# For ActiveModel (the same except the lookup namespace)
+class FileModel
+  include ActiveModel::Model
+
+  attr_accessor :content_type
+end
+
+file = FileModel.new(content_type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+file.human_attribute_value(:content_type)
+ => "Excel/Calc"
+
+FileModel.human_attribute_value(:content_type, 'application/pdf')
+ => "PDF"
+
+FileModel.human_attribute_value(:content_type, 'text/plain')
+ => "text/plain"
 ```
 
 ### Boolean values
@@ -71,6 +95,10 @@ en:
           '3_14': Pi
           '42': 'the answer to life, the universe and everything'
 ```
+
+### Strings
+Starting with version 1.2.0, dots in strings are also replaced by an underscore for the lookup (before this was only done for numbers).
+
 
 ### Child classes
 For models with single table inheritance (STI), the lookup will start with the translations for the class and go up through the class hierarchy and use the translation for the closest parent if there is any.

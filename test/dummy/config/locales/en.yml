@@ -31,6 +31,10 @@ en:
       active_model_grand_child:
         inherited_attr:
           one: 'active model grandchild value 1'
+      file_model:
+        content_type:
+          application/pdf: PDF
+          application/vnd_openxmlformats-officedocument_spreadsheetml_sheet: Excel/Calc
   activerecord:
     models:
       the_answer: The ultimate Answer
