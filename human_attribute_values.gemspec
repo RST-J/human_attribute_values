@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.files = Dir['lib/**/*.rb']
   s.extra_rdoc_files = ['README.md', 'MIT-LICENSE', 'CHANGELOG.md']
   s.test_files = Dir['test/**/*']
-  s.required_ruby_version = '>= 2.0.0'
+  s.required_ruby_version = '>= 2.3.0'
   s.license = 'MIT'
 
   s.add_dependency 'rails', '>= 4.2.10', '<6.0'

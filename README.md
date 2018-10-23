@@ -11,7 +11,7 @@ gem install human_attribute_values
 
 ## Supported versions
   * Rails: >= 4.2.10
-  * Ruby: MRI >= 2.3.8
+  * Ruby: MRI >= 2.3.0
 
 ## Usage
 The gem defines ``human_attribute_value`` as instance and class method on ``ActiveRecord::Base`` and ``ActiveModel::Model``.
