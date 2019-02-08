@@ -27,7 +27,7 @@ matrix:
 
 before_script:
   - gem install bundler
-  - bundle exec appraisal install
+  - bundle install
   - cd test/dummy
   - bundle exec rake db:create db:schema:load RAILS_ENV=test --trace
   - bundle exec rake db:environment:set RAILS_ENV=test --trace
