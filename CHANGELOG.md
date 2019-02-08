@@ -5,6 +5,10 @@ Please keep to the changelog format described on [keepachangelog.com](http://kee
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.1] - 2019-02-08
+### Added
+- Support for rails 6 beta
+
 ## [1.2.0] - 2018-10-21
 ### Fixed
 - Replace dots for all types of values (not only Numeric)

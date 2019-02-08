@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.3.0'
   s.license = 'MIT'
 
-  s.add_dependency 'rails', '>= 4.2.10', '<6.0'
+  s.add_dependency 'rails', '>= 4.2.10'
 
   s.add_development_dependency 'appraisal', '~> 2.0'
   s.add_development_dependency 'byebug'
