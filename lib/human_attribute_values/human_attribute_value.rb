@@ -11,6 +11,7 @@ module HumanAttributeValues
   module ClassMethods
     def human_attribute_value(attribute, value, options = {})
       return '' if value.nil? || value == ''
+
       options = {count: 1}.merge!(options)
       parts = attribute.to_s.split('.')
       attribute = parts.pop
@@ -36,7 +37,7 @@ module HumanAttributeValues
       defaults << value.to_s
 
       options[:default] = defaults
-      I18n.translate(defaults.shift, options)
+      I18n.translate(defaults.shift, **options)
     end
   end
 end
