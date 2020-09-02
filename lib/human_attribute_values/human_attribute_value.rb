@@ -37,10 +37,10 @@ module HumanAttributeValues
       defaults << value.to_s
 
       options[:default] = defaults
-      I18n.translate(defaults.shift, **options)
+      I18n.t(defaults.shift, **options)
     end
   end
 end
 
-ActiveRecord::Base.send :include, HumanAttributeValues
-ActiveModel::Model.send :include, HumanAttributeValues
+ActiveRecord::Base.include HumanAttributeValues
+ActiveModel::Model.include HumanAttributeValues
