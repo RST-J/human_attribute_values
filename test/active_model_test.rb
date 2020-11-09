@@ -68,4 +68,14 @@ class ActiveModelTest < ActiveSupport::TestCase
     assert_equal('1.5', instance.human_attribute_value(:float_attr), 'should return the stringified float if there is no mapping')
     assert_equal('1001', instance.human_attribute_value(:integer_attr), 'should return the stringified integer if there is no mapping')
   end
+
+  test 'resolution of array values' do
+    instance = ActiveModelModel.new
+
+    instance.array_attr = ['USD', 'GBP']
+    assert_equal(['Dollar', 'Pound'], instance.human_attribute_value(:array_attr), 'should translate each element')
+
+    instance.array_attr << "JPY"
+    assert_equal(['Dollar', 'Pound', 'JPY'], instance.human_attribute_value(:array_attr), 'should return the stringified array values if no translation is defined')
+  end
 end

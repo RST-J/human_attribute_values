@@ -5,7 +5,14 @@ module HumanAttributeValues
 
   def human_attribute_value(attribute, options = {})
     value = public_send(attribute)
-    self.class.human_attribute_value(attribute, value, options)
+
+    if value.is_a? Array
+      value.map do |v|
+        self.class.human_attribute_value(attribute, v, options)
+      end
+    else
+      self.class.human_attribute_value(attribute, value, options)
+    end
   end
 
   module ClassMethods
