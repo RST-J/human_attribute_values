@@ -14,8 +14,37 @@ gem install human_attribute_values
   * Ruby: MRI >= 2.3.0
 
 ## Usage
-The gem defines ``human_attribute_value`` as instance and class method on ``ActiveRecord::Base`` and ``ActiveModel::Model``.
-To translate a value it uses the I18n API. The translations are looked up from the current locale file under the key ``'activerecord.values.model_name.attribute_name.value'`` respectively ``'activemodel.values.model_name.attribute_name.value'`` by default.
+
+The module `HumanAttributeValues` defines `human_attribute_value` as both an instance and class method.
+
+
+### ActiveRecord
+
+You can include the module in any specific models you wish to translate directly, or include it in `ApplicationRecord` globally.
+
+```ruby
+class ApplicationRecord < ActiveRecord::Base
+  include HumanAttributeValues
+  self.abstract_class = true
+end
+```
+
+To translate a value it uses the I18n API. The translations are looked up from the current locale file under the key `'activerecord.values.{model_name}.attribute_name.value'` by default.
+
+### ActiveModel
+
+You can include the module in any specific models you wish to translate directly, or include it in `ApplicationRecord` globally.
+
+```ruby
+class Model
+  include ActiveModel::Model
+  include HumanAttributeValues
+
+  attr_accessor ...
+end
+```
+
+To translate a value it uses the I18n API. The translations are looked up from the current locale file under the key `'activemodel.values.{model_name}.attribute_name.value'` by default.
 
 ### Locale:
 ```yml
