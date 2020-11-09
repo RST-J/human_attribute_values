@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class TheAnswer < ActiveRecord::Base
+class TheAnswer < ApplicationRecord
   belongs_to :lexicon
 end

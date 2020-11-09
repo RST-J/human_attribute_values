@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    human_attribute_values (1.2.1)
+    human_attribute_values (1.2.2)
       rails (>= 4.2.10)
 
 GEM
@@ -135,7 +135,7 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.4.0)
+    zeitwerk (2.4.1)
 
 PLATFORMS
   ruby

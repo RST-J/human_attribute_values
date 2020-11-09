@@ -2,6 +2,7 @@
 
 class ActiveModelParent
   include ActiveModel::Model
+  include HumanAttributeValues
 
   attr_accessor :inherited_attr
 end
