@@ -17,7 +17,6 @@ gem install human_attribute_values
 
 The module `HumanAttributeValues` defines `human_attribute_value` as both an instance and class method.
 
-
 ### ActiveRecord
 
 You can include the module in any specific models you wish to translate directly, or include it in `ApplicationRecord` globally.
