@@ -41,6 +41,3 @@ module HumanAttributeValues
     end
   end
 end
-
-ActiveRecord::Base.include HumanAttributeValues
-ActiveModel::Model.include HumanAttributeValues
