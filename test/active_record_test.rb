@@ -74,4 +74,12 @@ class ActiveRecordTest < ActiveSupport::TestCase
     enum_model.status = 2
     assert_equal('dead', enum_model.human_attribute_value(:status), 'should return the stringified enum value if no translation is defined 2')
   end
+
+  test 'resolution for arrays' do
+    array_model = ArrayModel.new(currencies: ['USD', 'GBP'])
+    assert_equal(['Dollar', 'Pound'], array_model.human_attribute_value(:currencies), 'should translate each element')
+
+    array_model.currencies << "JPY"
+    assert_equal(['Dollar', 'Pound', 'JPY'], array_model.human_attribute_value(:currencies), 'should return the stringified array values if no translation is defined')
+  end
 end

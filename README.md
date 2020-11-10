@@ -96,6 +96,26 @@ en:
           '42': 'the answer to life, the universe and everything'
 ```
 
+### Arrays
+If you have a serialized array or array attribute, each element in the array will attempt to translate.
+
+```yml
+en:
+  activerecord:
+    values:
+      magic_number:
+        array_attr:
+          currencies:
+            USD: Dollar
+            GBP: Pound
+```
+
+```ruby
+item = Item.new(currencies: ['USD', 'GBP'])
+item.human_attribute_values(:currencies)
+ => ['Dollar', 'Pound']
+```
+
 ### Strings and Symbols
 Starting with version 1.2.0, dots in strings and symbols (actually in all values) are also replaced by an underscore for the lookup (before this was only done for numbers).
 

@@ -16,6 +16,9 @@ en:
             one: one goose
             other: some geese
           'application/x-my_mime1': Custom Mime Type 1
+        array_attr:
+          USD: Dollar
+          GBP: Pound
       active_model_parent:
         inherited_attr:
           one: 'active model parent value 1'
@@ -75,3 +78,7 @@ en:
       enum_model:
         status:
           dead_and_alive: 'The box has not been opened yet'
+      array_model:
+        currencies:
+          USD: Dollar
+          GBP: Pound
